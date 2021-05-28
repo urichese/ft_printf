@@ -3,6 +3,7 @@
 
 # include "../libft/libft.h"
 # include <stdarg.h>
+# include <stdlib.h>
 
 typedef	struct		s_flags
 {
@@ -22,6 +23,11 @@ t_flags				flag_minus(t_flags flags);
 t_flags				flag_width(va_list args, t_flags flags);
 t_flags				flag_digit(char c, t_flags flags);
 
+
+
 int		putstrprec(char *str, int prec);
+char		*ft_ull_base(unsigned long long ull, int base);
+char	*ft_str_tolower(char *str);
+int		process_width(int width, int minus, int has_zero);
 
 #endif
