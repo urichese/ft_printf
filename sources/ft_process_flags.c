@@ -2,21 +2,21 @@
 
 
 
-t_flags	flag_zero(t_flags flags)
+t_flags	ft_flag_zero(t_flags flags)
 {
 	if (flags->width == 0 && flags->minus == 0)
 		flags->zero = 1;
 	return (flags);
 }
 
-t_flags	flag_minus(t_flags flags)
+t_flags	ft_flag_minus(t_flags flags)
 {
 	flags.minus = 1;
 	flags.zero = 0;
 	return (flags);
 }
 
-t_flags	flag_digit(char c, t_flags flags)
+t_flags	ft_flag_digit(char c, t_flags flags)
 {
 	if (flags.star == 1)
 		flags.width = 0;
@@ -24,7 +24,7 @@ t_flags	flag_digit(char c, t_flags flags)
 	return (flags);
 }
 
-t_flags	flag_width(va_list args, t_flags flags)
+t_flags	ft_flag_width(va_list args, t_flags flags)
 {
 	flags.star = 1;
 	flags.width = va_arg(args, int);
@@ -36,7 +36,7 @@ t_flags	flag_width(va_list args, t_flags flags)
 	return (flags);
 }
 
-int	flag_dot(const char *save, int start,
+int	ft_flag_dot(const char *save, int start,
 						   t_flags *flags, va_list args)
 {
 	int i;

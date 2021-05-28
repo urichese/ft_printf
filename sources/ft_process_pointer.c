@@ -16,7 +16,7 @@ static int	ft_in_put_part_pointer(char *pointer, t_flags flags)
 	return (char_count);
 }
 
-int			process_pointer(unsigned long long ull, t_flags flags)
+int			ft_process_pointer(unsigned long long ull, t_flags flags)
 {
 	char	*pointer;
 	int		char_count;

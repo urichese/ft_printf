@@ -33,7 +33,7 @@ static int		ft_put_part_hexa(char *hexa, t_flags flags)
 	return (char_count);
 }
 
-int				process_hexa(unsigned int ui, int lower, t_flags flags)
+int				ft_process_hexa(unsigned int ui, int lower, t_flags flags)
 {
 	char	*hexa;
 	int		char_count;

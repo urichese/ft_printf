@@ -34,7 +34,7 @@ static int	ft_put_part_int(char *d_i, int save_i, t_flags flags)
 	return (char_count);
 }
 
-int			process_int(int i, t_flags flags)
+int			ft_process_int(int i, t_flags flags)
 {
 	char	*d_i;
 	int		save_i;

@@ -1,6 +1,6 @@
 #include "../ft_printf.h"
 
-int	putstrprec(char *str, int prec)
+int	ft_putstrprec(char *str, int prec)
 {
 	int char_count;
 
@@ -10,7 +10,7 @@ int	putstrprec(char *str, int prec)
 	return (char_count);
 }
 
-static int	put_part_int(char *str, t_flags flags)
+static int	ft_put_part_int(char *str, t_flags flags)
 {
 	int char_count;
 
@@ -27,7 +27,7 @@ static int	put_part_int(char *str, t_flags flags)
 	return (char_count);
 }
 
-int	process_string(char *str, t_flags flags)
+int	ft_process_string(char *str, t_flags flags)
 {
 	int char_count;
 
@@ -39,9 +39,9 @@ int	process_string(char *str, t_flags flags)
 	if (flags.minus == 1)
 		char_count += ft_put_part_int(str, flags);
 	if (flags.dot >= 0)
-		char_count += process_width(flags.width, flags.dot, 0);
+		char_count += ft_process_width(flags.width, flags.dot, 0);
 	else
-		char_count += process_width(flags.width, ft_strlen(str), 0);
+		char_count += ft_process_width(flags.width, ft_strlen(str), 0);
 	if (flags.minus == 0)
 		char_count += ft_put_part_int(str, flags);
 	return (char_count);

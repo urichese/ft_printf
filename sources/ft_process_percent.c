@@ -1,6 +1,6 @@
 #include "../ft_printf.h"
 
-int		ft_treat_percent(t_flags flags)
+int		ft_process_percent(t_flags flags)
 {
 	int char_count;
 

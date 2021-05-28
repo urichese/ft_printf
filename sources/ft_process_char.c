@@ -1,6 +1,6 @@
 #include "../ft_printf.h"
 
-int		process_char(char c, t_flags flags)
+int		ft_process_char(char c, t_flags flags)
 {
 	int char_count;
 
