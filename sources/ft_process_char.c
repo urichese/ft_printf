@@ -7,7 +7,7 @@ int	ft_process_char(char c, t_flags flags)
 	char_count = 0;
 	if (flags.minus == 1)
 		ft_putchar(c);
-	char_count = process_width(flags.width, 1, 0);
+	char_count = ft_process_width(flags.width, 1, 0);
 	if (flags.minus == 0)
 		ft_putchar(c);
 	return (char_count + 1);

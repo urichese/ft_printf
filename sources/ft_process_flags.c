@@ -1,10 +1,9 @@
 #include "../ft_printf.h"
 
-t_flags	ft_flag_zero(t_flags flags)
+void	ft_flag_zero(t_flags *flags)
 {
 	if (flags->width == 0 && flags->minus == 0)
 		flags->zero = 1;
-	return (flags);
 }
 
 t_flags	ft_flag_minus(t_flags flags)

@@ -16,15 +16,15 @@ typedef struct s_flags
 	int				star;
 }	t_flags;
 
-int	ft_is_in_type_list(int c);
-int	ft_is_in_flags_list(int c);
-t_flags	ft_init_flags(void);
-int	ft_process(int c, t_flags flags, va_list args);
-int	ft_parse_flag(const char *str, int i, t_flags *flags, va_list args);
+int					ft_is_in_type_list(int c);
+int					ft_is_in_flags_list(int c);
+t_flags				ft_init_flags(void);
+int					ft_process(int c, t_flags flags, va_list args);
+int					ft_parse_flag(const char *str, int i, t_flags *flags, va_list args);
 
 int					ft_flag_dot(const char *save, int start,
 						t_flags *flags, va_list args);
-t_flags				ft_flag_zero(t_flags flags);
+void				ft_flag_zero(t_flags *flags);
 t_flags				ft_flag_minus(t_flags flags);
 t_flags				ft_flag_width(va_list args, t_flags flags);
 t_flags				ft_flag_digit(char c, t_flags flags);

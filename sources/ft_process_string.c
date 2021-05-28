@@ -17,12 +17,12 @@ static int	ft_put_part_int(char *str, t_flags flags)
 	char_count = 0;
 	if (flags.dot >= 0)
 	{
-		char_count += process_width(flags.dot, ft_strlen(str), 0);
-		char_count += putstrprec(str, flags.dot);
+		char_count += ft_process_width(flags.dot, ft_strlen(str), 0);
+		char_count += ft_putstrprec(str, flags.dot);
 	}
 	else
 	{
-		char_count += putstrprec(str, ft_strlen(str));
+		char_count += ft_putstrprec(str, ft_strlen(str));
 	}
 	return (char_count);
 }

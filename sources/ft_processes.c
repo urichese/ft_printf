@@ -58,7 +58,7 @@ int	ft_parse_flag(const char *str, int i, t_flags *flags, va_list args)
 			&& !ft_is_in_flags_list(str[i]))
 			break ;
 		if (str[i] == '0')
-			*flags = ft_flag_zero(*flags);
+			ft_flag_zero(flags);
 		if (str[i] == '.')
 			i = ft_flag_dot(str, i, flags, args);
 		if (str[i] == '-')

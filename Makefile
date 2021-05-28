@@ -11,7 +11,6 @@ SRCS =  ft_printf.c \
 		sources/ft_ull_base.c \
 		sources/ft_putchar.c \
 		sources/ft_str_tolower.c \
-		sources/ft_putstrprec.c \
 		sources/ft_process_string.c \
 		sources/ft_process_char.c \
 		sources/ft_process_pointer.c \
@@ -22,13 +21,12 @@ SRCS =  ft_printf.c \
 		sources/ft_process_flags.c
 
 SURPL_O = 	ft_process_width.o \
-			ft_process.o \
+			ft_processes.o \
 			ft_process_width.o \
 			ft_u_itoa.o \
 			ft_ull_base.o \
 			ft_putchar.o \
 			ft_str_tolower.o \
-			ft_putstrprec.o \
 			ft_process_string.o \
 			ft_process_char.o \
 			ft_process_pointer.o \
