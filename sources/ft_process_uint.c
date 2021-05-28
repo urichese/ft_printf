@@ -7,7 +7,7 @@ static int	ft_in_put_part_uint(char *unsi_int, t_flags flags)
 	char_count = 0;
 	if (flags.dot >= 0)
 		char_count += ft_process_width(flags.dot - 1,
-								 ft_strlen(unsi_int) - 1, 1);
+				ft_strlen(unsi_int) - 1, 1);
 	char_count += ft_putstrprec(unsi_int, ft_strlen(unsi_int));
 	return (char_count);
 }
@@ -27,8 +27,8 @@ static int	ft_put_part_uint(char *unsi_int, t_flags flags)
 		char_count += ft_process_width(flags.width, 0, 0);
 	}
 	else
-		char_count += ft_process_width(flags.width,
-								 ft_strlen(unsi_int), flags.zero);
+		char_count += ft_process_width(flags.width, ft_strlen(unsi_int),
+				flags.zero);
 	if (flags.minus == 0)
 		char_count += ft_in_put_part_uint(unsi_int, flags);
 	return (char_count);

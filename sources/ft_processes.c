@@ -3,7 +3,7 @@
 int	ft_is_in_type_list(int c)
 {
 	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd') || (c == 'i')
-	|| (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
+		|| (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
 }
 
 int	ft_is_in_flags_list(int c)
@@ -35,12 +35,12 @@ int	ft_process(int c, t_flags flags, va_list args)
 		char_count = ft_process_string(va_arg(args, char *), flags);
 	else if (c == 'p')
 		char_count = ft_process_pointer(va_arg(args, unsigned long long),
-								  flags);
+				flags);
 	else if (c == 'd' || c == 'i')
 		char_count = ft_process_int(va_arg(args, int), flags);
 	else if (c == 'u')
 		char_count += ft_process_uint((unsigned int)va_arg(args, unsigned int),
-								flags);
+				flags);
 	else if (c == 'x')
 		char_count += ft_process_hexa(va_arg(args, unsigned int), 1, flags);
 	else if (c == 'X')
