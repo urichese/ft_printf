@@ -47,7 +47,7 @@ OBJS = $(SRCS:.c=.o)
 $(NAME): $(OBJS)
 	$(MAKE) bonus -C ./libft
 	cp libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(INCLUDES) $(SRCS)
+	$(CC) $(FLAGS) $(INCLUDES) $(SRCS) libft.a
 	ar -rcs $(NAME) $(OBJS)
 
 all : $(NAME)

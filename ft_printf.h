@@ -1,7 +1,7 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include <stdarg.h>
 # include <stdlib.h>
 
@@ -15,6 +15,8 @@ typedef struct s_flags
 	int				dot;
 	int				star;
 }	t_flags;
+
+int	ft_printf(const char *s, ...);
 
 int					ft_is_in_type_list(int c);
 int					ft_is_in_flags_list(int c);
