@@ -1,7 +1,7 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "../libft/libft.h"
+# include "libft/libft.h"
 # include <stdarg.h>
 # include <stdlib.h>
 
@@ -15,6 +15,12 @@ typedef struct s_flags
 	int				dot;
 	int				star;
 }	t_flags;
+
+int	ft_is_in_type_list(int c);
+int	ft_is_in_flags_list(int c);
+t_flags	ft_init_flags(void);
+int	ft_process(int c, t_flags flags, va_list args);
+int	ft_parse_flag(const char *str, int i, t_flags *flags, va_list args);
 
 int					ft_flag_dot(const char *save, int start,
 						t_flags *flags, va_list args);
@@ -36,5 +42,6 @@ char				*ft_ull_base(unsigned long long ull, int base);
 char				*ft_str_tolower(char *str);
 int					ft_process_width(int width, int minus, int has_zero);
 char				*ft_u_itoa(unsigned int n);
+int					ft_putchar(int c);
 
 #endif

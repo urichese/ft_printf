@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	process_str(const char *str, va_list args)
+int	ft_process_str(const char *str, va_list args)
 {
 	int			i;
 	t_flags		flags;
@@ -10,14 +10,14 @@ int	process_str(const char *str, va_list args)
 	char_count = 0;
 	while (1)
 	{
-		flags = init_flags();
+		flags = ft_init_flags();
 		if (!str[i])
 			break ;
 		else if (str[i] == '%' && str[i + 1])
 		{
-			i = parse_flag(str, ++i, &flags, args);
+			i = ft_parse_flag(str, ++i, &flags, args);
 			if (ft_is_in_type_list(str[i]))
-				char_count += process((char)flags.type, flags, args);
+				char_count += ft_process((char)flags.type, flags, args);
 			else if (str[i])
 				char_count += ft_putchar(str[i]);
 		}
@@ -37,7 +37,7 @@ int	ft_printf(const char *s, ...)
 	str = ft_strdup(s);
 	char_count = 0;
 	va_start(args, s);
-	char_count += process_str(str, args);
+	char_count += ft_process_str(str, args);
 	va_end(args);
 	free((char *)str);
 	return (char_count);
