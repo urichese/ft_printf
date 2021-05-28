@@ -2,18 +2,19 @@
 
 static int	ft_in_put_part_uint(char *unsi_int, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (flags.dot >= 0)
-		char_count += ft_process_width(flags.dot - 1, ft_strlen(unsi_int) - 1, 1);
+		char_count += ft_process_width(flags.dot - 1,
+								 ft_strlen(unsi_int) - 1, 1);
 	char_count += ft_putstrprec(unsi_int, ft_strlen(unsi_int));
 	return (char_count);
 }
 
 static int	ft_put_part_uint(char *unsi_int, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (flags.minus == 1)
@@ -27,20 +28,19 @@ static int	ft_put_part_uint(char *unsi_int, t_flags flags)
 	}
 	else
 		char_count += ft_process_width(flags.width,
-									 ft_strlen(unsi_int), flags.zero);
+								 ft_strlen(unsi_int), flags.zero);
 	if (flags.minus == 0)
 		char_count += ft_in_put_part_uint(unsi_int, flags);
 	return (char_count);
 }
 
-int			ft_process_uint(unsigned int unsi, t_flags flags)
+int	ft_process_uint(unsigned int unsi, t_flags flags)
 {
 	char	*unsi_int;
 	int		char_count;
 
 	char_count = 0;
-	unsi = (unsigned int)(4294967295 + 1
-						  + unsi);
+	unsi = (unsigned int)(4294967295 + 1 + unsi);
 	if (flags.dot == 0 && unsi == 0)
 	{
 		char_count += ft_process_width(flags.width, 0, 0);

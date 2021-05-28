@@ -2,7 +2,7 @@
 
 int	ft_putstrprec(char *str, int prec)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	while (str[char_count] && char_count < prec)
@@ -12,7 +12,7 @@ int	ft_putstrprec(char *str, int prec)
 
 static int	ft_put_part_int(char *str, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (flags.dot >= 0)
@@ -29,7 +29,7 @@ static int	ft_put_part_int(char *str, t_flags flags)
 
 int	ft_process_string(char *str, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (!str)

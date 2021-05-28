@@ -1,8 +1,8 @@
 #include "../ft_printf.h"
 
-int		ft_process_width(int width, int minus, int has_zero)
+int	ft_process_width(int width, int minus, int has_zero)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	while (width - minus > 0)

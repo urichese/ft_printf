@@ -2,7 +2,7 @@
 
 static int	ft_in_put_part_int(char *d_i, int save_i, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (save_i < 0 && flags.dot >= 0)
@@ -15,7 +15,7 @@ static int	ft_in_put_part_int(char *d_i, int save_i, t_flags flags)
 
 static int	ft_put_part_int(char *d_i, int save_i, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (flags.minus == 1)
@@ -34,7 +34,7 @@ static int	ft_put_part_int(char *d_i, int save_i, t_flags flags)
 	return (char_count);
 }
 
-int			ft_process_int(int i, t_flags flags)
+int	ft_process_int(int i, t_flags flags)
 {
 	char	*d_i;
 	int		save_i;

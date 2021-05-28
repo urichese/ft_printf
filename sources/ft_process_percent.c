@@ -1,8 +1,8 @@
 #include "../ft_printf.h"
 
-int		ft_process_percent(t_flags flags)
+int	ft_process_percent(t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	if (flags.minus == 1)

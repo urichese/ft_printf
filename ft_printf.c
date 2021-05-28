@@ -28,7 +28,6 @@ int	process_str(const char *str, va_list args)
 	return (char_count);
 }
 
-
 int	ft_printf(const char *s, ...)
 {
 	const char	*str;
@@ -43,4 +42,3 @@ int	ft_printf(const char *s, ...)
 	free((char *)str);
 	return (char_count);
 }
-

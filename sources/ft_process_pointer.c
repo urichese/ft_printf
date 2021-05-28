@@ -2,7 +2,7 @@
 
 static int	ft_in_put_part_pointer(char *pointer, t_flags flags)
 {
-	int char_count;
+	int	char_count;
 
 	char_count = 0;
 	char_count += putstrprec("0x", 2);
@@ -16,7 +16,7 @@ static int	ft_in_put_part_pointer(char *pointer, t_flags flags)
 	return (char_count);
 }
 
-int			ft_process_pointer(unsigned long long ull, t_flags flags)
+int	ft_process_pointer(unsigned long long ull, t_flags flags)
 {
 	char	*pointer;
 	int		char_count;

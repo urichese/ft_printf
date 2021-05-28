@@ -15,7 +15,7 @@ static char	*treat_base(unsigned long long ull_save, int base,
 	return (rtn);
 }
 
-char		*ft_ull_base(unsigned long long ull, int base)
+char	*ft_ull_base(unsigned long long ull, int base)
 {
 	char				*rtn;
 	unsigned long long	ull_save;
@@ -31,7 +31,8 @@ char		*ft_ull_base(unsigned long long ull, int base)
 		ull /= base;
 		count++;
 	}
-	if (!(rtn = malloc(sizeof(char) * (count + 1))))
+	rtn = malloc(sizeof(char) * (count + 1));
+	if (!rtn)
 		return (0);
 	rtn[count] = '\0';
 	rtn = treat_base(ull_save, base, rtn, count);

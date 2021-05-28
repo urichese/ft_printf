@@ -1,7 +1,5 @@
 #include "../ft_printf.h"
 
-
-
 t_flags	ft_flag_zero(t_flags flags)
 {
 	if (flags->width == 0 && flags->minus == 0)
@@ -39,7 +37,7 @@ t_flags	ft_flag_width(va_list args, t_flags flags)
 int	ft_flag_dot(const char *save, int start,
 						   t_flags *flags, va_list args)
 {
-	int i;
+	int	i;
 
 	i = start;
 	i++;
